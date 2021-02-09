@@ -1,0 +1,8 @@
+<!--packageA/pages/myAddress/myAddress.wxml-->
+<scroll-view scroll-y="true" style="height: calc(100% - {{safeAreaHeight*2+96}}rpx)" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  
+</scroll-view>
+<view class="foot-btn border-1px-t">
+  <view class="chooseAddr" bindtap="chooseAddr">获取微信地址</view>
+  <view class="addAddr border-1px">新增地址</view>
+</view>

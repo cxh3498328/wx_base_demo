@@ -1,0 +1,34 @@
+<!--pages/profile.wxml-->
+<view class="wx-head" style="padding-top:{{statusBarHeight*2}}rpx;">
+  <view class="tool-bar" style="height:{{toolbarHeight}}px">个人中心</view>
+</view>
+<scroll-view scroll-y="true" class="scroll-view" style="height: calc(100% - {{(statusBarHeight + toolbarHeight + 48)*2}}rpx);top:{{statusBarHeight + toolbarHeight}}px" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+ <view class="info-head-card">
+   <image src="../../image/profile/bg_profile.png"></image>
+  <view class="info">
+    <view class="left">
+      <view class="nickName">{{userInfo.nickName}}</view>
+      <view class="tip">个人信息</view>
+    </view>
+    <view class="right">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+  </view>
+  <view class="info-main-card">
+    <view class="card-list">
+      <view class="card-item border-1px" data-url="discount" bindtap="goWhere">
+        <text>我的优惠券</text>
+      </view>
+      <view class="card-item border-1px">
+        领券中心
+      </view>
+      <view class="card-item border-1px">
+        我的会员卡
+      </view>
+      <view class="card-item" data-url="myAddress" bindtap="goWhere">
+        我的收获地址
+      </view>
+    </view>
+  </view>
+ </view>
+</scroll-view>
